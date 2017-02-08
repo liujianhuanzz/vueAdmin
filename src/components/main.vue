@@ -1,12 +1,16 @@
 <template>
   <div class="mainPage">
-
+    <vHeader></vHeader>
   </div>
 </template>
 
 <script>
+import vHeader from './layout/Header'
 export default {
   name: 'main',
+  components: {
+    vHeader
+  },
   data () {return {}}
 }
 </script>
