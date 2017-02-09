@@ -9,8 +9,10 @@
     "build": "node build/build.js"
   },
   "dependencies": {
+    "bulma": "^0.3.1",
     "element-ui": "^1.1.6",
     "vue": "^2.1.10",
+    "vue-bulma-expanding": "0.0.0",
     "vue-nprogress": "^0.1.4",
     "vue-router": "^2.2.0"
   },

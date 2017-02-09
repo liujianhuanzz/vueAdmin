@@ -1,42 +1,30 @@
 <template>
-  <aside class="menu app-sidebar animated" :class="{ slideInLeft: show, slideOutLeft: !show }">
-    <p class="menu-label">
-      General
-    </p>
-    <ul class="menu-list">
-      <li v-for="(item, index) in menu">
-        <router-link :to="item.path" :exact="true" :aria-expanded="isExpanded(item) ? 'true' : 'false'" v-if="item.path" @click.native="toggle(index, item)">
-          <span class="icon is-small"><i :class="['fa', item.meta.icon]"></i></span>
+  <aside class="va-sidebar">
+    <ul class="va-sidebar-list">
+      <li v-for="(item, index) in menu" class="va-sidebar-list-item" v-on:mouseenter="sidebarHover($event)" v-on:mouseleave="sidebarHoverLeave($event)">
+        <router-link class="va-sidebar-list-link" :to="item.path" :exact="true" :aria-expanded="isExpanded(item) ? 'true' : 'false'" v-if="item.path" @click.native="toggle(index, item)">
+          <span><i :class="['fa', item.meta.icon]"></i></span>
           {{ item.meta.label || item.name }}
-          <span class="icon is-small is-angle" v-if="item.children && item.children.length">
+          <span v-if="item.children && item.children.length">
             <i class="fa fa-angle-down"></i>
           </span>
         </router-link>
-        <a :aria-expanded="isExpanded(item)" v-else @click="toggle(index, item)">
-          <span class="icon is-small"><i :class="['fa', item.meta.icon]"></i></span>
+        <a class="va-sidebar-list-link" :aria-expanded="isExpanded(item)" v-else @click="toggle(index, item)">
+          <span><i :class="['fa', item.meta.icon]"></i></span>
           {{ item.meta.label || item.name }}
-          <span class="icon is-small is-angle" v-if="item.children && item.children.length">
+          <span v-if="item.children && item.children.length">
             <i class="fa fa-angle-down"></i>
           </span>
         </a>
-
-        <expanding v-if="item.children && item.children.length">
-          <ul v-show="isExpanded(item)">
-            <li v-for="subItem in item.children" v-if="subItem.path">
-              <router-link :to="generatePath(item, subItem)">
-                {{ subItem.meta && subItem.meta.label || subItem.name }}
-              </router-link>
-            </li>
-          </ul>
-        </expanding>
       </li>
     </ul>
+    <div class="sidebar-hover-elem"></div>
   </aside>
 </template>
 
 <script>
+import menu from '../../sidebarData/index'
 import Expanding from 'vue-bulma-expanding'
-import { mapGetters, mapActions } from 'vuex'
 
 export default {
   components: {
@@ -49,7 +37,8 @@ export default {
 
   data () {
     return {
-      isReady: false
+      isReady: false,
+      menu: menu
     }
   },
 
@@ -61,15 +50,14 @@ export default {
     }
   },
 
-  computed: mapGetters({
-    menu: 'menuitems'
-  }),
-
   methods: {
-    ...mapActions([
-      'expandMenu'
-    ]),
-
+    sidebarHover (evt){
+      let index = Math.floor((evt.clientY - 84) / 42);
+      evt.target.parentNode.nextElementSibling.style.top = 18 + index * 42 + 'px';
+    },
+    sidebarHoverLeave(evt){
+      evt.target.parentNode.nextElementSibling.style.top = '-200px';
+    },
     isExpanded (item) {
       return item.meta.expanded
     },
@@ -133,55 +121,64 @@ export default {
 </script>
 
 <style lang="scss">
-@import '~bulma/sass/utilities/variables';
-@import '~bulma/sass/utilities/mixins';
-
-.app-sidebar {
-  position: fixed;
-  top: 50px;
-  left: 0;
-  bottom: 0;
-  padding: 20px 0 50px;
+.va-sidebar{
   width: 180px;
-  min-width: 45px;
-  max-height: 100vh;
-  height: calc(100% - 50px);
-  z-index: 1024 - 1;
-  background: #FFF;
-  box-shadow: 0 2px 3px rgba(17, 17, 17, 0.1), 0 0 0 1px rgba(17, 17, 17, 0.1);
-  overflow-y: auto;
-  overflow-x: hidden;
+  min-height: 100%;
+  height: 100%;
+  position: fixed;
+  left: 0;
+  top: 66px;
+  z-index: 1000;
+  background-color: #282828;
 
-  @include mobile() {
-    transform: translate3d(-180px, 0, 0);
-  }
+  .va-sidebar-list{
+    margin: 0;
+    padding: 18px 0 0 0;
+    list-style: none;
 
-  .icon {
-    vertical-align: baseline;
-    &.is-angle {
-      position: absolute;
-      right: 10px;
-      transition: transform .377s ease;
+    .va-sidebar-list-item{
+      display: block;
+      position: relative;
+      float: none;
+      padding: 0;
     }
-  }
 
-  .menu-label {
-    padding-left: 5px;
-  }
+    a.va-sidebar-list-link{
+      display: block;
+      height: 42px;
+      text-shadow: none;
+      font-size: 13px;
+      text-decoration: none;
+      text-align: left;
+      color: #fff;
+      line-height: 42px;
+      white-space: nowrap;
+      overflow: hidden;
+      cursor: pointer;
 
-  .menu-list {
-    li a {
-      &[aria-expanded="true"] {
-        .is-angle {
-          transform: rotate(180deg);
-        }
+      span i{
+        margin-left: 20px;
+        margin-right: 18px;
+        width: 16px;
+        display: inline-block;
       }
     }
-
-    li a + ul {
-      margin: 0 10px 0 15px;
+    a:hover{
+      cursor: pointer;
+      color: #00abff;
     }
   }
 
+  .sidebar-hover-elem {
+    display: block;
+    width: 4px;
+    height: 42px;
+    background: #00abff;
+    position: absolute;
+    left: 176px;
+    top: -200px;
+    transition: all 0.5s ease;
+    transition-property: top, height;
+  }
 }
 </style>

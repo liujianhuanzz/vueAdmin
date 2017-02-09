@@ -1,15 +1,19 @@
 <template>
   <div class="mainPage">
     <vHeader></vHeader>
+    <Sidebar></Sidebar>
   </div>
 </template>
 
 <script>
 import vHeader from './layout/Header'
+import Sidebar from './layout/Sidebar'
+
 export default {
   name: 'main',
   components: {
-    vHeader
+    vHeader,
+    Sidebar
   },
   data () {return {}}
 }
