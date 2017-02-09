@@ -13,8 +13,7 @@ export default {
       meta: {
         description: 'Jump component is based on jump.js',
         repository: 'https://github.com/vue-bulma/jump'
-      },
-      component: ''
+      }
     }
   ]
 }

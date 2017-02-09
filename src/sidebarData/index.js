@@ -1,5 +1,6 @@
 import components from './components'
 import charts from './charts'
+
 const state = {
   items: [
     {
@@ -7,8 +8,7 @@ const state = {
       path: '/dashboard',
       meta: {
         icon: 'fa-tachometer'
-      },
-      component: ''
+      }
     },
     charts,
     components

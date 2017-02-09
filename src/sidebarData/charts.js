@@ -5,13 +5,11 @@ export default {
     icon: 'fa-bar-chart-o',
     expanded: false
   },
-  component: '',
 
   children: [
     {
-      name: 'Chartist',
-      path: 'chartist',
-      component: ''
+      name: 'Column',
+      path: 'column'
     }
   ]
 }

@@ -1,21 +1,30 @@
 <template>
   <aside class="va-sidebar">
     <ul class="va-sidebar-list">
-      <li v-for="(item, index) in menu" class="va-sidebar-list-item" v-on:mouseenter="sidebarHover($event)" v-on:mouseleave="sidebarHoverLeave($event)">
+      <li v-for="(item, index) in menu" class="va-sidebar-list-item">
         <router-link class="va-sidebar-list-link" :to="item.path" :exact="true" :aria-expanded="isExpanded(item) ? 'true' : 'false'" v-if="item.path" @click.native="toggle(index, item)">
           <span><i :class="['fa', item.meta.icon]"></i></span>
           {{ item.meta.label || item.name }}
           <span v-if="item.children && item.children.length">
-            <i class="fa fa-angle-down"></i>
+            <b class="fa fa-angle-down"></b>
           </span>
         </router-link>
         <a class="va-sidebar-list-link" :aria-expanded="isExpanded(item)" v-else @click="toggle(index, item)">
           <span><i :class="['fa', item.meta.icon]"></i></span>
           {{ item.meta.label || item.name }}
           <span v-if="item.children && item.children.length">
-            <i class="fa fa-angle-down"></i>
+            <b class="fa fa-angle-down"></b>
           </span>
         </a>
+        <expanding v-if="item.children && item.children.length">
+          <ul v-show="isExpanded(item)" class="va-sidebar-sublist">
+            <li v-for="subItem in item.children" v-if="subItem.path" class="va-sidebar-sublist-item">
+              <router-link :to="generatePath(item, subItem)" class="va-sidebar-sublist-link">
+                {{ subItem.meta && subItem.meta.label || subItem.name }}
+              </router-link>
+            </li>
+          </ul>
+        </expanding>
       </li>
     </ul>
     <div class="sidebar-hover-elem"></div>
@@ -37,83 +46,22 @@ export default {
 
   data () {
     return {
-      isReady: false,
       menu: menu
     }
   },
 
-  mounted () {
-    let route = this.$route
-    if (route.name) {
-      this.isReady = true
-      this.shouldExpandMatchItem(route)
-    }
-  },
-
   methods: {
-    sidebarHover (evt){
-      let index = Math.floor((evt.clientY - 84) / 42);
-      evt.target.parentNode.nextElementSibling.style.top = 18 + index * 42 + 'px';
-    },
-    sidebarHoverLeave(evt){
-      evt.target.parentNode.nextElementSibling.style.top = '-200px';
-    },
     isExpanded (item) {
       return item.meta.expanded
     },
 
     toggle (index, item) {
-      this.expandMenu({
-        index: index,
-        expanded: !item.meta.expanded
-      })
-    },
-
-    shouldExpandMatchItem (route) {
-      let matched = route.matched
-      let lastMatched = matched[matched.length - 1]
-      let parent = lastMatched.parent || lastMatched
-      const isParent = parent === lastMatched
-
-      if (isParent) {
-        const p = this.findParentFromMenu(route)
-        if (p) {
-          parent = p
-        }
-      }
-
-      if ('expanded' in parent.meta && !isParent) {
-        this.expandMenu({
-          item: parent,
-          expanded: true
-        })
-      }
+      item.meta.expanded = !item.meta.expanded;
     },
 
     generatePath (item, subItem) {
-      return `${item.component ? item.path + '/' : ''}${subItem.path}`
-    },
-
-    findParentFromMenu (route) {
-      const menu = this.menu
-      for (let i = 0, l = menu.length; i < l; i++) {
-        const item = menu[i]
-        const k = item.children && item.children.length
-        if (k) {
-          for (let j = 0; j < k; j++) {
-            if (item.children[j].name === route.name) {
-              return item
-            }
-          }
-        }
-      }
-    }
-  },
-
-  watch: {
-    $route (route) {
-      this.isReady = true
-      this.shouldExpandMatchItem(route)
+      console.log(item.path+":"+subItem.path)
+      return `${item.path}/${subItem.path}`
     }
   }
 
@@ -141,6 +89,31 @@ export default {
       position: relative;
       float: none;
       padding: 0;
+
+      .va-sidebar-sublist{
+        position: relative;
+        list-style: none;
+        padding: 0;
+
+         & > li{
+          display: block;
+          float: none;
+          padding: 0;
+          border-bottom: none;
+          position: relative;
+
+          .va-sidebar-sublist-link{
+            display: block;
+            text-shadow: none;
+            font-size: 13px;
+            color: #fff;
+            text-align: left;
+            padding-left: 68px;
+            height: auto;
+            line-height: 29px;
+          }
+        }
+      }
     }
 
     a.va-sidebar-list-link{
@@ -162,10 +135,25 @@ export default {
         width: 16px;
         display: inline-block;
       }
+      span b{
+        display: block;
+        opacity: 1;
+        width: 14px;
+        height: 14px;
+        text-shadow: none;
+        font-size: 18px;
+        position: absolute;
+        right: 10px;
+        top: 12px;
+        padding: 0;
+        text-align: center;
+      }
     }
-    a:hover{
+    a:hover, a.is-active{
       cursor: pointer;
       color: #00abff;
+      opacity: 0.7;
+      border-right: 5px solid #00abff;
     }
   }
 

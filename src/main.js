@@ -3,11 +3,14 @@
 import Vue from 'vue'
 import App from './App'
 import router from './router'
-
+import NProgress from 'vue-nprogress'
 import ElementUI from 'element-ui'
 import 'element-ui/lib/theme-default/index.css'
 
 Vue.use(ElementUI)
+Vue.use(NProgress)
+
+const nprogress = new NProgress({ parent: '.nprogress-container' })
 
 /* eslint-disable no-new */
 new Vue({

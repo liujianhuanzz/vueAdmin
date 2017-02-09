@@ -1,19 +1,22 @@
 <template>
   <div class="mainPage">
-    <vHeader></vHeader>
-    <Sidebar></Sidebar>
+    <v-header></v-header>
+    <sidebar></sidebar>
+    <app-main></app-main>
   </div>
 </template>
 
 <script>
 import vHeader from './layout/Header'
 import Sidebar from './layout/Sidebar'
+import AppMain from './layout/AppMain'
 
 export default {
   name: 'main',
   components: {
     vHeader,
-    Sidebar
+    Sidebar,
+    AppMain
   },
   data () {return {}}
 }

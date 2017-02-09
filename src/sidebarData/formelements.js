@@ -8,11 +8,10 @@ export default {
   children: [
     {
       name: 'Form Input',
-      path: 'form-input',
+      path: '/forminput',
       meta: {
         label: 'Form Input'
-      },
-      component: ''
+      }
     }
   ]
 }
