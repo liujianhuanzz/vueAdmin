@@ -61,7 +61,6 @@ export default {
     },
 
     generatePath (item, subItem) {
-      console.log(item.path+":"+subItem.path)
       return `${item.path}/${subItem.path}`
     }
   }

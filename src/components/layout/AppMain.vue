@@ -1,16 +1,20 @@
 <template>
   <section class="va-main">
     <div class="va-content">
+      <level-bar></level-bar>
       <router-view></router-view>
     </div>
   </section>
 </template>
 
 <script>
-//import Levelbar from './Levelbar'
+import LevelBar from './LevelBar'
 
 export default {
-
+  name: 'appMain',
+  components: {
+    LevelBar
+  }
 }
 </script>
 

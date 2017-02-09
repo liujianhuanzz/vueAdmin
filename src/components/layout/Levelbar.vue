@@ -1,23 +1,46 @@
 <template>
-  <nav class="level app-levelbar">
-    <div class="level-left">
-      <div class="level-item">
-        <h3 class="subtitle is-5">
-          <strong>{{ name }}</strong>
-        </h3>
-      </div>
-    </div>
+  <nav class="va-levelbar">
+    <h1 class="va-title">{{name}}</h1>
 
-    <div class="level-right is-hidden-mobile">
+    <div class="va-breadcrumb">
       <breadcrumb :list="list"><breadcrumb>
     </div>
   </nav>
 </template>
 
+<style lang="scss">
+.va-levelbar{
+  padding-top: 13px;
+  padding-bottom: 27px;
+
+  h1.va-title{
+    font-size: 24px;
+    font-weight: 700;
+    float: left;
+    width: auto;
+    color: #fff;
+    margin: 0;
+    padding: 0;
+    text-transform: uppercase;
+    opacity: 0.9;
+  }
+
+  .va-breadcrumb{
+    float: right;
+    background: none;
+    color: #fff;
+    padding: 0;
+    margin: 0;
+  }
+}
+</style>
+
 <script>
 import Breadcrumb from 'vue-bulma-breadcrumb'
 
 export default {
+  name: 'LevelBar',
+
   components: {
     Breadcrumb
   },
