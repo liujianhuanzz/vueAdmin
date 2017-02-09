@@ -6,7 +6,8 @@
           <span><i :class="['fa', item.meta.icon]"></i></span>
           {{ item.meta.label || item.name }}
           <span v-if="item.children && item.children.length">
-            <b class="fa fa-angle-down"></b>
+            <b class="fa fa-angle-up" v-if="isExpanded(item)"></b>
+            <b class="fa fa-angle-down" v-else></b>
           </span>
         </router-link>
         <a class="va-sidebar-list-link" :aria-expanded="isExpanded(item)" v-else @click="toggle(index, item)">
@@ -152,7 +153,7 @@ export default {
     a:hover, a.is-active{
       cursor: pointer;
       color: #00abff;
-      opacity: 0.7;
+      background-color: #383838;
       border-right: 5px solid #00abff;
     }
   }
