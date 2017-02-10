@@ -38,7 +38,7 @@ export default {
     left: 0;
     width: 100%;
     height: 100%;
-    background: url('sky-bg.jpg') no-repeat center center;
+    background: url('~assets/sky-bg.jpg') no-repeat center center;
     background-size: cover;
     will-change: transform;
     z-index: 0;
