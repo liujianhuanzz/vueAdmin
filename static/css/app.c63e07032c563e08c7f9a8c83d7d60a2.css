@@ -1,6 +1,6 @@
 
 #app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
+  font-family: "Roboto",'Microsoft Yahei','Avenir', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
@@ -464,13 +464,16 @@
 }
 .columnGrid {
   color: #fff;
-  height: 330px;
+  height: 360px;
   background-color: rgba(255, 255, 255, 0.1);
   border: 0;
   border-radius: 7px;
   position: relative;
   margin-bottom: 24px;
   box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.15);
+}
+.columnGrid:hover {
+    box-shadow: 0px 0px 10px #00abff;
 }
 .columnGrid .columnHeader {
     font-size: 16px;
@@ -543,4 +546,4 @@
   height: 400px;
 }
 
-/*# sourceMappingURL=app.39fbff8d36225e73f1345fc5b7459cb5.css.map*/
+/*# sourceMappingURL=app.c63e07032c563e08c7f9a8c83d7d60a2.css.map*/
