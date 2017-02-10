@@ -13,7 +13,7 @@
     <div class="user-profile clearfix">
       <div class="va-user-profile">
         <a href="#" class="profile-toggle-link" id="user-profile-dd">
-          <img src="./user.png" alt="用户头像">
+          <img src="~assets/user.png" alt="用户头像">
         </a>
       </div>
       <ul class="va-msg-center clearfix">
