@@ -26,7 +26,7 @@ export default {
   margin-left: 180px;
 
   .va-content{
-    padding: 8px 32px 8px 40px;
+    padding: 8px 15px 8px 15px;
   }
 }
 </style>

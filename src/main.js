@@ -12,6 +12,10 @@ Vue.use(NProgress)
 
 const nprogress = new NProgress({ parent: '.nprogress-container' })
 
+import ECharts from 'vue2-echarts/src/ECharts/ECharts.vue'
+// register the component to use
+Vue.component('chart', ECharts)
+
 /* eslint-disable no-new */
 new Vue({
   el: '#app',
