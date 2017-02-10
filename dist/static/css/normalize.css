@@ -103,7 +103,7 @@ pre {
  */
 
 a {
-  color: #285cb8;
+  color: #00abff;
   text-decoration: none !important;
   transition: color 0.2s ease;
   background-color: transparent; /* 1 */
@@ -117,7 +117,7 @@ a {
 
 a:active,
 a:hover {
-  color: #e7ba08;
+  color: #4dc4ff;
   outline-width: 0;
 }
 
