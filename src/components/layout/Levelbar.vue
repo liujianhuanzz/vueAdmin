@@ -31,6 +31,10 @@
     color: #fff;
     padding: 0;
     margin: 0;
+
+    ol.breadcrumb{
+      margin: 0;
+    }
   }
 }
 </style>
