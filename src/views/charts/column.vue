@@ -76,13 +76,17 @@ export default {
 }
 .columnGrid{
   color: #fff;
-  height: 330px;
+  height: 360px;
   background-color: rgba(255, 255, 255, 0.1);
   border: 0;
   border-radius: 7px;
   position: relative;
   margin-bottom: 24px;
   box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.15);
+
+  &:hover{
+    box-shadow: 0px 0px 10px #00abff;
+  }
 
   .columnHeader{
     font-size: 16px;
