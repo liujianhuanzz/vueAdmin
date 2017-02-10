@@ -49,6 +49,54 @@
           </div>
         </div>
       </el-col>
+      <el-col :lg="12">
+        <div class="columnGrid">
+          <div class="columnHeader">
+            <h4 class="columnTitle">
+              交错正负轴标签
+            </h4>
+          </div>
+          <div class="columnContent">
+            <column5></column5>
+          </div>
+        </div>
+      </el-col>
+      <el-col :lg="12">
+        <div class="columnGrid">
+          <div class="columnHeader">
+            <h4 class="columnTitle">
+              堆叠柱状图
+            </h4>
+          </div>
+          <div class="columnContent">
+            <column6></column6>
+          </div>
+        </div>
+      </el-col>
+      <el-col :lg="12">
+        <div class="columnGrid">
+          <div class="columnHeader">
+            <h4 class="columnTitle">
+              坐标轴刻度与标签对齐
+            </h4>
+          </div>
+          <div class="columnContent">
+            <column7></column7>
+          </div>
+        </div>
+      </el-col>
+      <el-col :lg="12">
+        <div class="columnGrid">
+          <div class="columnHeader">
+            <h4 class="columnTitle">
+              总体数值为部分数值之和
+            </h4>
+          </div>
+          <div class="columnContent">
+            <column8></column8>
+          </div>
+        </div>
+      </el-col>
     </el-row>
   </div>
 </template>
@@ -58,13 +106,21 @@ import column1 from './column/column-1';
 import column2 from './column/column-2';
 import column3 from './column/column-3';
 import column4 from './column/column-4';
+import column5 from './column/column-5';
+import column6 from './column/column-6';
+import column7 from './column/column-7';
+import column8 from './column/column-8';
 
 export default {
   components: {
     column1,
     column2,
     column3,
-    column4
+    column4,
+    column5,
+    column6,
+    column7,
+    column8
   }
 }
 </script>
