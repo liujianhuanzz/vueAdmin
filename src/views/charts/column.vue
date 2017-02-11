@@ -97,6 +97,18 @@
           </div>
         </div>
       </el-col>
+      <el-col :lg="12">
+        <div class="columnGrid">
+          <div class="columnHeader">
+            <h4 class="columnTitle">
+              阶梯瀑布图
+            </h4>
+          </div>
+          <div class="columnContent">
+            <column9></column9>
+          </div>
+        </div>
+      </el-col>
     </el-row>
   </div>
 </template>
@@ -110,6 +122,7 @@ import column5 from './column/column-5';
 import column6 from './column/column-6';
 import column7 from './column/column-7';
 import column8 from './column/column-8';
+import column9 from './column/column-9';
 
 export default {
   components: {
@@ -120,7 +133,8 @@ export default {
     column5,
     column6,
     column7,
-    column8
+    column8,
+    column9
   }
 }
 </script>
