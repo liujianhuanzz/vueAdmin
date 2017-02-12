@@ -109,6 +109,54 @@
           </div>
         </div>
       </el-col>
+      <el-col :lg="12">
+        <div class="columnGrid">
+          <div class="columnHeader">
+            <h4 class="columnTitle">
+              堆叠条形图
+            </h4>
+          </div>
+          <div class="columnContent">
+            <column10></column10>
+          </div>
+        </div>
+      </el-col>
+      <el-col :lg="12">
+        <div class="columnGrid">
+          <div class="columnHeader">
+            <h4 class="columnTitle">
+              条形图
+            </h4>
+          </div>
+          <div class="columnContent">
+            <column11></column11>
+          </div>
+        </div>
+      </el-col>
+      <el-col :lg="12">
+        <div class="columnGrid">
+          <div class="columnHeader">
+            <h4 class="columnTitle">
+              某地区降水量与蒸发量
+            </h4>
+          </div>
+          <div class="columnContent">
+            <column12></column12>
+          </div>
+        </div>
+      </el-col>
+      <el-col :lg="12">
+        <div class="columnGrid">
+          <div class="columnHeader">
+            <h4 class="columnTitle">
+              动态数据
+            </h4>
+          </div>
+          <div class="columnContent">
+            <column13></column13>
+          </div>
+        </div>
+      </el-col>
     </el-row>
   </div>
 </template>
@@ -123,6 +171,10 @@ import column6 from './column/column-6';
 import column7 from './column/column-7';
 import column8 from './column/column-8';
 import column9 from './column/column-9';
+import column10 from './column/column-10';
+import column11 from './column/column-11';
+import column12 from './column/column-12';
+import column13 from './column/column-13';
 
 export default {
   components: {
@@ -134,7 +186,11 @@ export default {
     column6,
     column7,
     column8,
-    column9
+    column9,
+    column10,
+    column11,
+    column12,
+    column13
   }
 }
 </script>
