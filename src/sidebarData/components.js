@@ -8,12 +8,8 @@ export default {
 
   children: [
     {
-      name: 'BackToTop',
-      path: 'backToTop',
-      meta: {
-        description: 'Jump component is based on jump.js',
-        repository: 'https://github.com/vue-bulma/jump'
-      }
+      name: 'Steps',
+      path: 'steps'
     }
   ]
 }

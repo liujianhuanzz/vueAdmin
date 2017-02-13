@@ -35,12 +35,12 @@ export default new Router({
     /*components*/
     {
       path: '/components',
-      name: 'components',
-      component: require('../views/components')
-    },{
-      path: '/components/backToTop',
-      name: 'backToTop',
-      component: require('../views/components/backToTop')
+      redirect: '/components/steps'
+    },
+    {
+      path: '/components/steps',
+      name: 'steps',
+      component: require('../views/components/steps')
     },
     /*uifeatures*/
     {
