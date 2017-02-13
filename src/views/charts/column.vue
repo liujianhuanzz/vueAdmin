@@ -157,6 +157,42 @@
           </div>
         </div>
       </el-col>
+      <el-col :lg="12">
+        <div class="columnGrid">
+          <div class="columnHeader">
+            <h4 class="columnTitle">
+              折柱混合
+            </h4>
+          </div>
+          <div class="columnContent">
+            <column14></column14>
+          </div>
+        </div>
+      </el-col>
+      <el-col :lg="24">
+        <div class="columnGrid" style="height:650px;">
+          <div class="columnHeader">
+            <h4 class="columnTitle">
+              全国宏观经济指标
+            </h4>
+          </div>
+          <div class="columnContent">
+            <column15></column15>
+          </div>
+        </div>
+      </el-col>
+      <el-col :lg="24">
+        <div class="columnGrid" style="height:650px;">
+          <div class="columnHeader">
+            <h4 class="columnTitle">
+              Echarts下载统计
+            </h4>
+          </div>
+          <div class="columnContent">
+            <column16></column16>
+          </div>
+        </div>
+      </el-col>
     </el-row>
   </div>
 </template>
@@ -175,6 +211,9 @@ import column10 from './column/column-10';
 import column11 from './column/column-11';
 import column12 from './column/column-12';
 import column13 from './column/column-13';
+import column14 from './column/column-14';
+import column15 from './column/column-15';
+import column16 from './column/column-16';
 
 export default {
   components: {
@@ -190,7 +229,10 @@ export default {
     column10,
     column11,
     column12,
-    column13
+    column13,
+    column14,
+    column15,
+    column16
   }
 }
 </script>
