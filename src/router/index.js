@@ -25,12 +25,16 @@ export default new Router({
     {
       path: '/charts/column',
       name: 'column',
-      component: require('../views/charts/column')
+      component: function(resolve){
+        require(['../views/charts/column'],resolve)
+      }
     },
     {
       path: '/charts/scatter',
       name: 'scatter',
-      component: require('../views/charts/scatter')
+      component: function(resolve){
+        require(['../views/charts/scatter'],resolve);
+      }
     },
     /*components*/
     {
@@ -40,7 +44,9 @@ export default new Router({
     {
       path: '/components/steps',
       name: 'steps',
-      component: require('../views/components/steps')
+      component: function(resolve){
+        require(['../views/components/steps'],resolve)
+      }
     },
     /*uifeatures*/
     {
@@ -50,7 +56,9 @@ export default new Router({
     {
       path: '/uifeatures/buttons',
       name: 'buttons',
-      component: require('../views/uifeatures/buttons')
+      component: function(resolve){
+        require(['../views/uifeatures/buttons'],resolve)
+      }
     },
     {
       path: '*',
