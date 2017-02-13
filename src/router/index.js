@@ -20,8 +20,7 @@ export default new Router({
     /*charts*/
     {
       path: '/charts',
-      name: 'charts',
-      component: require('../views/charts')
+      redirect: '/charts/column'
     },
     {
       path: '/charts/column',
@@ -42,6 +41,16 @@ export default new Router({
       path: '/components/backToTop',
       name: 'backToTop',
       component: require('../views/components/backToTop')
+    },
+    /*uifeatures*/
+    {
+      path: '/uifeatures',
+      redirect: '/uifeatures/buttons'
+    },
+    {
+      path: '/uifeatures/buttons',
+      name: 'buttons',
+      component: require('../views/uifeatures/buttons')
     },
     {
       path: '*',

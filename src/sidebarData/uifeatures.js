@@ -1,4 +1,7 @@
 export default {
+  name: 'UI Features',
+  path: '/uifeatures',
+
   meta: {
     label: 'UI Features',
     icon: 'fa-laptop',
@@ -8,8 +11,7 @@ export default {
   children: [
     {
       name: 'Buttons',
-      path: '/buttons',
-      component: ''
+      path: 'buttons'
     }
   ]
 }

@@ -1,5 +1,6 @@
 import components from './components'
 import charts from './charts'
+import uifeatures from './uifeatures'
 
 const state = {
   items: [
@@ -10,6 +11,7 @@ const state = {
         icon: 'fa-tachometer'
       }
     },
+    uifeatures,
     charts,
     components
   ]
