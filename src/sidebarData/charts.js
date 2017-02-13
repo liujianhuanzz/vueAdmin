@@ -10,6 +10,10 @@ export default {
     {
       name: 'Column',
       path: 'column'
+    },
+    {
+      name: 'Scatter',
+      path: 'scatter'
     }
   ]
 }

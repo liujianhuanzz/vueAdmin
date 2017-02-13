@@ -28,6 +28,11 @@ export default new Router({
       name: 'column',
       component: require('../views/charts/column')
     },
+    {
+      path: '/charts/scatter',
+      name: 'scatter',
+      component: require('../views/charts/scatter')
+    },
     /*components*/
     {
       path: '/components',
