@@ -80,8 +80,10 @@ const routes = [
   }
 ];
 
-export default new Router({
+const vuerouer =  new Router({
   linkActiveClass: 'is-active',
   routes: routes
 })
+
+export default vuerouer;
 // Menu should have 2 levels.
