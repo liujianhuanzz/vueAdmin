@@ -10,6 +10,10 @@ export default {
     {
       name: 'Steps',
       path: 'steps'
+    },
+    {
+      name: 'Loading',
+      path: 'loading'
     }
   ]
 }
