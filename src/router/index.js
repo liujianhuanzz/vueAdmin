@@ -34,6 +34,12 @@ const buttonsComponent = resolve => {
   })
 }
 
+const tableComponent = resolve => {
+  require.ensure(['../views/uifeatures/table'], () => {
+    resolve(require('../views/uifeatures/table'))
+  })
+}
+
 const routes = [
   {
     path: '/',
@@ -84,6 +90,11 @@ const routes = [
     path: '/uifeatures/buttons',
     name: 'buttons',
     component: buttonsComponent
+  },
+  {
+    path: '/uifeatures/table',
+    name: 'table',
+    component: tableComponent
   },
   {
     path: '*',

@@ -12,6 +12,10 @@ export default {
     {
       name: 'Buttons',
       path: 'buttons'
+    },
+    {
+      name: 'Table',
+      path: 'table'
     }
   ]
 }
