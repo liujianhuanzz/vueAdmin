@@ -28,17 +28,81 @@
         </div>
       </el-col>
     </el-row>
+    <el-row :gutter="20">
+      <el-col :lg="24" :md="24" :sm="24">
+        <div class="tableGrid">
+          <div class="tableHeader">
+            <h4 class="tableTitle">
+              带边框的表格
+            </h4>
+          </div>
+          <div class="tableContent">
+            <table3></table3>
+          </div>
+        </div>
+      </el-col>
+    </el-row>
+    <el-row :gutter="20">
+      <el-col :lg="24" :md="24" :sm="24">
+        <div class="tableGrid">
+          <div class="tableHeader">
+            <h4 class="tableTitle">
+              带状态的表格
+            </h4>
+          </div>
+          <div class="tableContent">
+            <table4></table4>
+          </div>
+        </div>
+      </el-col>
+    </el-row>
+    <el-row :gutter="20">
+      <el-col :lg="24" :md="24" :sm="24">
+        <div class="tableGrid">
+          <div class="tableHeader">
+            <h4 class="tableTitle">
+              固定表头的表格
+            </h4>
+          </div>
+          <div class="tableContent">
+            <table5></table5>
+          </div>
+        </div>
+      </el-col>
+    </el-row>
+    <el-row :gutter="20">
+      <el-col :lg="24" :md="24" :sm="24">
+        <div class="tableGrid">
+          <div class="tableHeader">
+            <h4 class="tableTitle">
+              固定表列的表格
+            </h4>
+          </div>
+          <div class="tableContent">
+            <table6></table6>
+          </div>
+        </div>
+      </el-col>
+    </el-row>
   </div>
 </template>
 
 <script>
 import table1 from './table/table-1';
 import table2 from './table/table-2';
+import table3 from './table/table-3';
+import table4 from './table/table-4';
+import table5 from './table/table-5';
+import table6 from './table/table-6';
 
 export default {
   components: {
     table1,
-    table2
+    table2,
+    table3,
+    table4,
+    table5,
+    table6
   }
 }
 </script>
