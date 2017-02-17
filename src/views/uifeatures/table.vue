@@ -1,7 +1,7 @@
 <template lang="html">
   <div class="tablePanel">
     <el-row :gutter="20">
-      <el-col :lg="24" :md="24" :sm="24">
+      <el-col :lg="12" :md="12" :sm="24">
         <div class="tableGrid">
           <div class="tableHeader">
             <h4 class="tableTitle">
@@ -13,9 +13,7 @@
           </div>
         </div>
       </el-col>
-    </el-row>
-    <el-row :gutter="20">
-      <el-col :lg="24" :md="24" :sm="24">
+      <el-col :lg="12" :md="12" :sm="24">
         <div class="tableGrid">
           <div class="tableHeader">
             <h4 class="tableTitle">
@@ -29,7 +27,7 @@
       </el-col>
     </el-row>
     <el-row :gutter="20">
-      <el-col :lg="24" :md="24" :sm="24">
+      <el-col :lg="12" :md="12" :sm="24">
         <div class="tableGrid">
           <div class="tableHeader">
             <h4 class="tableTitle">
@@ -41,9 +39,7 @@
           </div>
         </div>
       </el-col>
-    </el-row>
-    <el-row :gutter="20">
-      <el-col :lg="24" :md="24" :sm="24">
+      <el-col :lg="12" :md="12" :sm="24">
         <div class="tableGrid">
           <div class="tableHeader">
             <h4 class="tableTitle">
@@ -57,7 +53,7 @@
       </el-col>
     </el-row>
     <el-row :gutter="20">
-      <el-col :lg="24" :md="24" :sm="24">
+      <el-col :lg="12" :md="12" :sm="24">
         <div class="tableGrid">
           <div class="tableHeader">
             <h4 class="tableTitle">
@@ -69,9 +65,7 @@
           </div>
         </div>
       </el-col>
-    </el-row>
-    <el-row :gutter="20">
-      <el-col :lg="24" :md="24" :sm="24">
+      <el-col :lg="12" :md="12" :sm="24">
         <div class="tableGrid">
           <div class="tableHeader">
             <h4 class="tableTitle">
@@ -80,6 +74,84 @@
           </div>
           <div class="tableContent">
             <table6></table6>
+          </div>
+        </div>
+      </el-col>
+    </el-row>
+    <el-row :gutter="20">
+      <el-col :lg="12" :md="12" :sm="24">
+        <div class="tableGrid">
+          <div class="tableHeader">
+            <h4 class="tableTitle">
+              固定表列和表头
+            </h4>
+          </div>
+          <div class="tableContent">
+            <table7></table7>
+          </div>
+        </div>
+      </el-col>
+      <el-col :lg="12" :md="12" :sm="24">
+        <div class="tableGrid">
+          <div class="tableHeader">
+            <h4 class="tableTitle">
+              流体高度
+            </h4>
+          </div>
+          <div class="tableContent">
+            <table8></table8>
+          </div>
+        </div>
+      </el-col>
+    </el-row>
+    <el-row>
+      <el-col :lg="12" :md="12" :sm="24">
+        <div class="tableGrid">
+          <div class="tableHeader">
+            <h4 class="tableTitle">
+              多级表头
+            </h4>
+          </div>
+          <div class="tableContent">
+            <table9></table9>
+          </div>
+        </div>
+      </el-col>
+      <el-col :lg="12" :md="12" :sm="24">
+        <div class="tableGrid">
+          <div class="tableHeader">
+            <h4 class="tableTitle">
+              单选变色
+            </h4>
+          </div>
+          <div class="tableContent">
+            <table10></table10>
+          </div>
+        </div>
+      </el-col>
+    </el-row>
+    <el-row>
+      <el-col :lg="12" :md="12" :sm="24">
+        <div class="tableGrid">
+          <div class="tableHeader">
+            <h4 class="tableTitle">
+              多选变色
+            </h4>
+          </div>
+          <div class="tableContent">
+            <table11></table11>
+          </div>
+        </div>
+      </el-col>
+      <el-col :lg="12" :md="12" :sm="24">
+        <div class="tableGrid">
+          <div class="tableHeader">
+            <h4 class="tableTitle">
+              排序
+            </h4>
+          </div>
+          <div class="tableContent">
+            <table12></table12>
           </div>
         </div>
       </el-col>
@@ -94,6 +166,12 @@ import table3 from './table/table-3';
 import table4 from './table/table-4';
 import table5 from './table/table-5';
 import table6 from './table/table-6';
+import table7 from './table/table-7';
+import table8 from './table/table-8';
+import table9 from './table/table-9';
+import table10 from './table/table-10';
+import table11 from './table/table-11';
+import table12 from './table/table-12';
 
 export default {
   components: {
@@ -102,7 +180,13 @@ export default {
     table3,
     table4,
     table5,
-    table6
+    table6,
+    table7,
+    table8,
+    table9,
+    table10,
+    table11,
+    table12
   }
 }
 </script>

@@ -1,9 +1,10 @@
 <template lang="html">
-  <div class="table-6">
+  <div class="table-7">
     <el-table
       :data="tableData"
       border
-      style="width: 100%">
+      style="width: 100%"
+      height="250">
       <el-table-column
         fixed
         prop="date"
@@ -35,27 +36,12 @@
         label="邮编"
         width="120">
       </el-table-column>
-      <el-table-column
-        fixed="right"
-        label="操作"
-        width="100">
-        <template scope="scope">
-          <el-button @click="handleClick" type="text" size="small">查看</el-button>
-          <el-button type="text" size="small">编辑</el-button>
-        </template>
-      </el-table-column>
     </el-table>
   </div>
 </template>
 
 <script>
 export default {
-    methods: {
-      handleClick() {
-        console.log(1);
-      }
-    },
-
     data() {
       return {
         tableData: [{
@@ -86,6 +72,27 @@ export default {
           city: '普陀区',
           address: '上海市普陀区金沙江路 1518 弄',
           zip: 200333
+        }, {
+          date: '2016-05-08',
+          name: '王小虎',
+          province: '上海',
+          city: '普陀区',
+          address: '上海市普陀区金沙江路 1518 弄',
+          zip: 200333
+        }, {
+          date: '2016-05-06',
+          name: '王小虎',
+          province: '上海',
+          city: '普陀区',
+          address: '上海市普陀区金沙江路 1518 弄',
+          zip: 200333
+        }, {
+          date: '2016-05-07',
+          name: '王小虎',
+          province: '上海',
+          city: '普陀区',
+          address: '上海市普陀区金沙江路 1518 弄',
+          zip: 200333
         }]
       }
     }
@@ -93,7 +100,7 @@ export default {
 </script>
 
 <style lang="scss">
-.table-6{
+.table-7{
   width: 100%;
   height: 100%;
 }
