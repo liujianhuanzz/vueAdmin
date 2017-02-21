@@ -104,7 +104,7 @@
         </div>
       </el-col>
     </el-row>
-    <el-row>
+    <el-row :gutter="20">
       <el-col :lg="12" :md="12" :sm="24">
         <div class="tableGrid">
           <div class="tableHeader">
@@ -130,7 +130,7 @@
         </div>
       </el-col>
     </el-row>
-    <el-row>
+    <el-row :gutter="20">
       <el-col :lg="12" :md="12" :sm="24">
         <div class="tableGrid">
           <div class="tableHeader">
@@ -156,6 +156,46 @@
         </div>
       </el-col>
     </el-row>
+    <el-row :gutter="20">
+      <el-col :lg="12" :md="12" :sm="24">
+        <div class="tableGrid">
+          <div class="tableHeader">
+            <h4 class="tableTitle">
+              筛选
+            </h4>
+          </div>
+          <div class="tableContent">
+            <table13></table13>
+          </div>
+        </div>
+      </el-col>
+      <el-col :lg="12" :md="12" :sm="24">
+        <div class="tableGrid">
+          <div class="tableHeader">
+            <h4 class="tableTitle">
+              自定义列模板
+            </h4>
+          </div>
+          <div class="tableContent">
+            <table14></table14>
+          </div>
+        </div>
+      </el-col>
+    </el-row>
+    <el-row :gutter="20">
+      <el-col :lg="12" :md="12" :sm="24">
+        <div class="tableGrid">
+          <div class="tableHeader">
+            <h4 class="tableTitle">
+              展开行
+            </h4>
+          </div>
+          <div class="tableContent">
+            <table15></table15>
+          </div>
+        </div>
+      </el-col>
+    </el-row>
   </div>
 </template>
 
@@ -172,6 +212,9 @@ import table9 from './table/table-9';
 import table10 from './table/table-10';
 import table11 from './table/table-11';
 import table12 from './table/table-12';
+import table13 from './table/table-13';
+import table14 from './table/table-14';
+import table15 from './table/table-15';
 
 export default {
   components: {
@@ -186,7 +229,10 @@ export default {
     table9,
     table10,
     table11,
-    table12
+    table12,
+    table13,
+    table14,
+    table15
   }
 }
 </script>
