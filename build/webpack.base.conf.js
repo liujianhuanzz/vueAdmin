@@ -31,6 +31,7 @@ module.exports = {
       'components': resolve('src/components')
     }
   },
+  devtool: 'source-map',
   module: {
     rules: [
       {
