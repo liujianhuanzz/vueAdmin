@@ -11,7 +11,6 @@
         <swiper-slide>Slide 8</swiper-slide>
         <swiper-slide>Slide 9</swiper-slide>
         <swiper-slide>Slide 10</swiper-slide>
-        <div class="swiper-pagination" slot="pagination"></div>
     </swiper>
   </div>
 </template>
@@ -28,8 +27,7 @@ export default {
   data() {
     return {
       swiperOption: {
-        pagination: '.swiper-pagination',
-        paginationClickable: true
+        notNextTick: true
       }
     }
   }
