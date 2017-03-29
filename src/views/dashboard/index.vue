@@ -1,15 +1,6 @@
 <template lang="html">
   <div class="indexPanel">
     <el-row :gutter="20">
-      <el-col :lg="24">
-        <div class="indexGrid">
-          <div class="indexContent">
-            <index5></index5>
-          </div>
-        </div>
-      </el-col>
-    </el-row>
-    <el-row :gutter="20">
       <el-col :lg="12">
         <div class="indexGrid">
           <div class="indexContent">
@@ -43,7 +34,6 @@
 </template>
 
 <script>
-import index5 from './index/index-5';
 import index1 from './index/index-1';
 import index2 from './index/index-2';
 import index3 from './index/index-3';
@@ -51,7 +41,6 @@ import index4 from './index/index-4';
 
 export default {
   components: {
-    index5,
     index1,
     index2,
     index3,

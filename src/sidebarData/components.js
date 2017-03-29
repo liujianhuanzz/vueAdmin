@@ -14,6 +14,10 @@ export default {
     {
       name: 'Loading',
       path: 'loading'
+    },
+    {
+      name: 'Alert',
+      path: 'alert'
     }
   ]
 }

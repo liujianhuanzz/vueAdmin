@@ -28,6 +28,12 @@ const loadingComponent = resolve => {
   })
 }
 
+const alertComponent = resolve => {
+  require.ensure(['../views/components/alert'], () => {
+    resolve(require('../views/components/alert'))
+  })
+}
+
 const buttonsComponent = resolve => {
   require.ensure(['../views/uifeatures/buttons'], () => {
     resolve(require('../views/uifeatures/buttons'))
@@ -80,6 +86,11 @@ const routes = [
     path: '/components/loading',
     name: 'loading',
     component: loadingComponent
+  },
+  {
+    path: '/components/alert',
+    name: 'alert',
+    component: alertComponent
   },
   /*uifeatures*/
   {
