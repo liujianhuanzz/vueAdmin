@@ -26,17 +26,63 @@
         </div>
       </el-col>
     </el-row>
+    <el-row :gutter="20">
+      <el-col :lg="12" :md="12" :sm="24">
+        <div class="alertGrid">
+          <div class="alertHeader">
+            <h4 class="alertTitle">
+              带有icon
+            </h4>
+          </div>
+          <div class="alertContent">
+            <alert3></alert3>
+          </div>
+        </div>
+      </el-col>
+      <el-col :lg="12" :md="12" :sm="24">
+        <div class="alertGrid">
+          <div class="alertHeader">
+            <h4 class="alertTitle">
+              带有icon和辅助性文字
+            </h4>
+          </div>
+          <div class="alertContent">
+            <alert4></alert4>
+          </div>
+        </div>
+      </el-col>
+    </el-row>
+    <el-row>
+      <el-col :lg="12" :md="12" :sm="24">
+        <div class="alertGrid">
+          <div class="alertHeader">
+            <h4 class="alertTitle">
+              带有辅助性文字
+            </h4>
+          </div>
+          <div class="alertContent">
+            <alert5></alert5>
+          </div>
+        </div>
+      </el-col>
+    </el-row>
   </div>
 </template>
 
 <script>
 import alert1 from './alert/alert-1';
 import alert2 from './alert/alert-2';
+import alert3 from './alert/alert-3';
+import alert4 from './alert/alert-4';
+import alert5 from './alert/alert-5';
 
 export default {
   components: {
     alert1,
-    alert2
+    alert2,
+    alert3,
+    alert4,
+    alert5
   }
 }
 </script>

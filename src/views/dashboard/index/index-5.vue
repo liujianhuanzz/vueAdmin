@@ -1,35 +1,19 @@
 <template lang="html">
   <div class="index-5">
-    <swiper :options="swiperOption">
-        <swiper-slide>Slide 1</swiper-slide>
-        <swiper-slide>Slide 2</swiper-slide>
-        <swiper-slide>Slide 3</swiper-slide>
-        <swiper-slide>Slide 4</swiper-slide>
-        <swiper-slide>Slide 5</swiper-slide>
-        <swiper-slide>Slide 6</swiper-slide>
-        <swiper-slide>Slide 7</swiper-slide>
-        <swiper-slide>Slide 8</swiper-slide>
-        <swiper-slide>Slide 9</swiper-slide>
-        <swiper-slide>Slide 10</swiper-slide>
-    </swiper>
+    <el-carousel indicator-position="outside">
+      <el-carousel-item v-for="item in 4">
+        <h3>{{ item }}</h3>
+      </el-carousel-item>
+    </el-carousel>
   </div>
 </template>
 
 <script>
-import { swiper, swiperSlide } from 'vue-awesome-swiper'
 
 export default {
   name: 'index-5',
-  components: {
-    swiper,
-    swiperSlide
-  },
   data() {
-    return {
-      swiperOption: {
-        notNextTick: true
-      }
-    }
+    return {}
   }
 }
 </script>
@@ -38,5 +22,20 @@ export default {
 .index-5{
   width: 100%;
   height: 100%;
+}
+.el-carousel__item h3 {
+  color: #475669;
+  font-size: 18px;
+  opacity: 0.75;
+  line-height: 300px;
+  margin: 0;
+}
+
+.el-carousel__item:nth-child(2n) {
+  background-color: #4b79c7;
+}
+
+.el-carousel__item:nth-child(2n+1) {
+  background-color: #5a9ac9;
 }
 </style>
