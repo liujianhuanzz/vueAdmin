@@ -94,7 +94,6 @@ export default {
 }
 .alertGrid{
   color: #fff;
-  height: 200px;
   background-color: rgba(255, 255, 255, 0.1);
   border: 0;
   border-radius: 7px;

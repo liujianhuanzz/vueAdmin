@@ -18,6 +18,10 @@ export default {
     {
       name: 'Alert',
       path: 'alert'
+    },
+    {
+      name: 'Message',
+      path: 'message'
     }
   ]
 }

@@ -37,6 +37,8 @@
           </div>
         </div>
       </el-col>
+    </el-row>
+    <el-row :gutter="20">
       <el-col :lg="16" :md="16" :sm="24">
         <div class="stepsGrid">
           <div class="stepsHeader">
@@ -90,7 +92,6 @@ export default {
 }
 .stepsGrid{
   color: #fff;
-  height: 200px;
   background-color: rgba(255, 255, 255, 0.1);
   border: 0;
   border-radius: 7px;
