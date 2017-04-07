@@ -22,6 +22,10 @@ export default {
     {
       name: 'Message',
       path: 'message'
+    },
+    {
+      name: 'MessageBox',
+      path: 'messageBox'
     }
   ]
 }

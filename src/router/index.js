@@ -40,6 +40,12 @@ const messageComponent = resolve => {
   })
 }
 
+const messageBoxComponent = resolve => {
+  require.ensure(['../views/components/messageBox'], () => {
+    resolve(require('../views/components/messageBox'))
+  })
+}
+
 const buttonsComponent = resolve => {
   require.ensure(['../views/uifeatures/buttons'], () => {
     resolve(require('../views/uifeatures/buttons'))
@@ -102,6 +108,11 @@ const routes = [
     path: '/components/message',
     name: 'message',
     component: messageComponent
+  },
+  {
+    path: '/components/messageBox',
+    name: 'messageBox',
+    component: messageBoxComponent
   },
   /*uifeatures*/
   {
