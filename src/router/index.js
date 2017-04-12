@@ -22,6 +22,12 @@ const stepsComponent = resolve => {
   })
 }
 
+const dropdownComponent = resolve => {
+  require.ensure(['../views/components/dropdown'], () => {
+    resolve(require('../views/components/dropdown'))
+  })
+}
+
 const loadingComponent = resolve => {
   require.ensure(['../views/components/loading'], () => {
     resolve(require('../views/components/loading'))
@@ -99,6 +105,11 @@ const routes = [
     path: '/components/steps',
     name: 'steps',
     component: stepsComponent
+  },
+  {
+    path: '/components/dropdown',
+    name: 'dropdown',
+    component: dropdownComponent
   },
   {
     path: '/components/loading',

@@ -12,6 +12,10 @@ export default {
       path: 'steps'
     },
     {
+      name: 'Dropdown',
+      path: 'dropdown'
+    },
+    {
       name: 'Loading',
       path: 'loading'
     },
