@@ -8,6 +8,10 @@ export default {
 
   children: [
     {
+      name: 'Tabs',
+      path: 'tabs'
+    },
+    {
       name: 'Steps',
       path: 'steps'
     },

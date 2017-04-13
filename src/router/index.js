@@ -16,6 +16,12 @@ const scatterComponent = resolve => {
   })
 }
 
+const tabsComponent = resolve => {
+  require.ensure(['../views/components/tabs'], () => {
+    resolve(require('../views/components/tabs'))
+  })
+}
+
 const stepsComponent = resolve => {
   require.ensure(['../views/components/steps'], () => {
     resolve(require('../views/components/steps'))
@@ -100,6 +106,11 @@ const routes = [
   {
     path: '/components',
     redirect: '/components/steps'
+  },
+  {
+    path: '/components/tabs',
+    name: 'tabs',
+    component: tabsComponent
   },
   {
     path: '/components/steps',
