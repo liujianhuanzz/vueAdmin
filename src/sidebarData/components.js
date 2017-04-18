@@ -8,6 +8,10 @@ export default {
 
   children: [
     {
+      name: 'Navmenu',
+      path: 'navmenu'
+    },
+    {
       name: 'Tabs',
       path: 'tabs'
     },

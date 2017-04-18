@@ -16,6 +16,12 @@ const scatterComponent = resolve => {
   })
 }
 
+const navmenuComponent = resolve => {
+  require.ensure(['../views/components/navmenu'], () => {
+    resolve(require('../views/components/navmenu'))
+  })
+}
+
 const tabsComponent = resolve => {
   require.ensure(['../views/components/tabs'], () => {
     resolve(require('../views/components/tabs'))
@@ -106,6 +112,11 @@ const routes = [
   {
     path: '/components',
     redirect: '/components/steps'
+  },
+  {
+    path: '/components/navmenu',
+    name: 'navmenu',
+    component: navmenuComponent
   },
   {
     path: '/components/tabs',
