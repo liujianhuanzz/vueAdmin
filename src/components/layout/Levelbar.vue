@@ -3,7 +3,7 @@
     <h1 class="va-title">{{name}}</h1>
 
     <div class="va-breadcrumb">
-      <breadcrumb :list="list"><breadcrumb>
+      <breadcrumb :list="list"></breadcrumb>
     </div>
   </nav>
 </template>
